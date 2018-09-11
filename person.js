@@ -55,6 +55,8 @@ class Person {
     let allCsv = [title, ...csvPeople].join('\n')
 
     fs.writeFileSync(path, allCsv)
+
+    return newPerson
   }
 }
 

@@ -9,9 +9,11 @@ class PersonController {
   }
 
   static write(file, firstName, lastName, email, phone) {
-    Person.write(file, firstName, lastName, email, phone)
+    const newPerson = Person.write(file, firstName, lastName, email, phone)
 
-    return View.display('Berhasil menambahkan data baru')
+    return View.display(
+      `Berhasil menambahkan data baru dengan nama ${newPerson.firstName}`
+    )
   }
 }
 
